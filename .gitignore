@@ -1,4 +1,11 @@
 ckpt/*
+
+
+log/*
+error/*
+output/*
+
+
 !ckpt/.gitkeep
 docker_stderror
 __pycache__
