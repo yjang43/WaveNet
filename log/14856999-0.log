@@ -1,0 +1,31 @@
+000 (14856999.000.000) 2022-01-26 11:33:31 Job submitted from host: <128.105.244.191:9618?addrs=128.105.244.191-9618&alias=submit-1.chtc.wisc.edu&noUDP&sock=schedd_3562897_9248>
+...
+040 (14856999.000.000) 2022-01-26 11:33:39 Started transferring input files
+	Transferring to host: <128.105.245.168:9618?addrs=128.105.245.168-9618&alias=interactive2001.chtc.wisc.edu&noUDP&sock=slot1_1_11544_8acf_10453>
+...
+040 (14856999.000.000) 2022-01-26 11:33:39 Finished transferring input files
+...
+001 (14856999.000.000) 2022-01-26 11:33:40 Job executing on host: <128.105.245.168:9618?addrs=128.105.245.168-9618&alias=interactive2001.chtc.wisc.edu&noUDP&sock=startd_2719_9619>
+...
+006 (14856999.000.000) 2022-01-26 11:44:05 Image size of job updated: 308720
+	3  -  MemoryUsage of job (MB)
+	2200  -  ResidentSetSize of job (KB)
+...
+040 (14856999.000.000) 2022-01-26 12:01:51 Started transferring output files
+...
+040 (14856999.000.000) 2022-01-26 12:01:51 Finished transferring output files
+...
+004 (14856999.000.000) 2022-01-26 12:01:52 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	714  -  Run Bytes Sent By Job
+	2116  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.00        1         1 
+	   Disk (KB)            :    41    31457280  32529866 
+	   IoHeavy              :                           0 
+	   Memory (MB)          :     3        4096      4096 
+...
+009 (14856999.000.000) 2022-01-26 12:01:52 Job was aborted.
+...

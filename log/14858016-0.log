@@ -1,0 +1,17 @@
+000 (14858016.000.000) 2022-01-26 13:54:12 Job submitted from host: <128.105.244.191:9618?addrs=128.105.244.191-9618&alias=submit-1.chtc.wisc.edu&noUDP&sock=schedd_3562897_9248>
+...
+040 (14858016.000.000) 2022-01-26 13:54:19 Started transferring input files
+	Transferring to host: <128.105.245.168:9618?addrs=128.105.245.168-9618&alias=interactive2001.chtc.wisc.edu&noUDP&sock=slot1_2_11544_8acf_10705>
+...
+007 (14858016.000.000) 2022-01-26 13:54:19 Shadow exception!
+	Error from slot1_2@interactive2001.chtc.wisc.edu: SHADOW at 128.105.244.191 failed to send file(s) to <128.105.245.168:34287>: error reading from /home/yjang43/WaveNet/preprocess.sh requirements.txt: (errno 2) No such file or directory; STARTER failed to receive file(s) from <128.105.244.191:9618>
+	0  -  Run Bytes Sent By Job
+	1883  -  Run Bytes Received By Job
+...
+012 (14858016.000.000) 2022-01-26 13:54:19 Job was held.
+	Error from slot1_2@interactive2001.chtc.wisc.edu: SHADOW at 128.105.244.191 failed to send file(s) to <128.105.245.168:34287>: error reading from /home/yjang43/WaveNet/preprocess.sh requirements.txt: (errno 2) No such file or directory; STARTER failed to receive file(s) from <128.105.244.191:9618>
+	Code 13 Subcode 2
+...
+009 (14858016.000.000) 2022-01-26 13:58:12 Job was aborted.
+	via condor_rm (by user yjang43)
+...

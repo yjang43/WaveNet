@@ -1,0 +1,32 @@
+000 (14858027.000.000) 2022-01-26 13:54:53 Job submitted from host: <128.105.244.191:9618?addrs=128.105.244.191-9618&alias=submit-1.chtc.wisc.edu&noUDP&sock=schedd_3562897_9248>
+...
+040 (14858027.000.000) 2022-01-26 13:54:59 Started transferring input files
+	Transferring to host: <128.105.245.168:9618?addrs=128.105.245.168-9618&alias=interactive2001.chtc.wisc.edu&noUDP&sock=slot1_2_11544_8acf_10706>
+...
+040 (14858027.000.000) 2022-01-26 13:54:59 Finished transferring input files
+...
+001 (14858027.000.000) 2022-01-26 13:55:00 Job executing on host: <128.105.245.168:9618?addrs=128.105.245.168-9618&alias=interactive2001.chtc.wisc.edu&noUDP&sock=startd_2719_9619>
+...
+006 (14858027.000.000) 2022-01-26 13:58:14 Image size of job updated: 1000
+	0  -  MemoryUsage of job (MB)
+	8  -  ResidentSetSize of job (KB)
+...
+040 (14858027.000.000) 2022-01-26 13:58:14 Started transferring output files
+...
+040 (14858027.000.000) 2022-01-26 13:58:14 Finished transferring output files
+...
+004 (14858027.000.000) 2022-01-26 13:58:14 Job was evicted.
+	(0) CPU times
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+	1304  -  Run Bytes Sent By Job
+	2211  -  Run Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     0.04        1         1 
+	   Disk (KB)            :    33    31457280  32529866 
+	   IoHeavy              :                           0 
+	   Memory (MB)          :     0        4096      4096 
+...
+009 (14858027.000.000) 2022-01-26 13:58:14 Job was aborted.
+	via condor_rm (by user yjang43)
+...

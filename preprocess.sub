@@ -1,0 +1,28 @@
+# docker for pytorch env
+universe = docker
+docker_image = python
+
+
+executable = preprocess.sh
+arguments = $(ClusterId) $(ProcId) $(args)
+
+
+log = log/$(ClusterId)-$(ProcId).log
+output = ouptut/$(ClusterId)-$(ProcId).out
+error = error/$(ClusterId)-$(ProcId).err
+
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT_OR_EVICT
+transfer_input_files = preprocess.py, preprocess.sh, requirements.txt
+
+
+request_cpus = 1
+
+
+request_memory = 4GB
+request_disk = 30GB
+
+
+
+queue 1

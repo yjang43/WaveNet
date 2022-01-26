@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # load data
-cp /staging/yjang43/[DATA_NAME].tar.gz ./
-tar -xzvf [DATA_NAME].tar.gz
+cp /staging/yjang43/vctk.zip ./
+unzip -q vctk.zip -d vctk
 
-# # install requirements
-# pip install requirements.txt
-python main.py --data_dir  \
-               --dataset_path \
+# install requirements
+pip install requirements.txt
+python main.py --data_dir vctk/wav48_silence_trimmed/p228/ \
+               --dataset_path dataset \
 
 # remove data
-rm -r [DATA_NAME].tar.gz [DATA_NAME]
+mv ./dataset.npz /staging/yjang43/dataset.npz
+rm -r vctk.zip vctk
+
