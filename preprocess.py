@@ -1,6 +1,8 @@
 import os
 # import soundfile as sf
-import librosa
+# import librosa
+import scipy.io.wavfile as wavfile
+import scipy.signal as signal
 import numpy as np
 
 from argparse import ArgumentParser
@@ -59,8 +61,12 @@ def get_files(dir_, audio_type='wav'):
 def create_dataset(dataset_path, files, sr=11025):
     dataset = []
     for f in tqdm(files):
-        wav, _ = librosa.load(f, sr=sr)
+        # wav, _ = librosa.load(f, sr=sr)
         # wav, _ = sf.read(f, sr=sr)
+        orig_sr, wav = wavfile.read(f)
+        new_sr = sr
+        num_sample = round(len(wav) * new_sr / orig_sr)
+        wav = signal.resample(wav, num_sample)
 #         wav = librosa.util.normalize(wav)
         quantized_wav = quantize(wav, 8)    # 8 bit
         quantized_wav = np.clip(quantized_wav, 0, 2**8 - 1)
