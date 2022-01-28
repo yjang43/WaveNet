@@ -18,7 +18,7 @@ def set_option():
     parser.add_argument('--DEVICE', default='cuda', type=str)
     parser.add_argument('--epoch', default=20, type=int)
     parser.add_argument('--lr', default=1e-3, type=float)
-    parser.add_argument('--batch_sz', default=128, type=int)
+    parser.add_argument('--batch_sz', default=32, type=int)
     parser.add_argument('--num_class', default=256, type=int)
     parser.add_argument('--clip', default=1.0, type=float)
     parser.add_argument('--max_itr', default=10_000, type=int)
