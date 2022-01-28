@@ -1,4 +1,5 @@
 ckpt/*
+audio/*
 
 
 log/*
@@ -11,5 +12,10 @@ output/*
 *.sub
 
 !ckpt/.gitkeep
+!audio/.gitkeep
+!log/.gitkeep
+!error/.gitkeep
+!output/.gitkeep
 docker_stderror
 __pycache__
+.DS_Store
