@@ -6,6 +6,10 @@ error/*
 output/*
 
 
+# condor
+*.sh
+*.sub
+
 !ckpt/.gitkeep
 docker_stderror
 __pycache__

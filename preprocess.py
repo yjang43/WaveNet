@@ -1,4 +1,5 @@
 import os
+# import soundfile as sf
 import librosa
 import numpy as np
 
@@ -8,8 +9,9 @@ from tqdm import tqdm
 
 def set_option():
     parser = ArgumentParser()
-    parser.add_argument('--data_dir', default='', type=str)
+    parser.add_argument('--data_dir', type=str)
     parser.add_argument('--dataset_path', default='./dataset', type=str)
+    parser.add_argument('--audio_type', default='wav', type=str)
 
     return parser.parse_args()
 
@@ -37,11 +39,11 @@ def inv_quantize(wav, bit):
 
 # recursively locate all the wav files
 
-def get_files(dir_):
+def get_files(dir_, audio_type='wav'):
     def _get_files(fps, dir_):
         _, ds, fs = next(os.walk(dir_))
         for f in fs:
-            if f.split('.')[-1] == 'wav':
+            if f.split('.')[-1] == audio_type:
                 fps.append(os.path.join(dir_, f))
         for d in ds:
             _get_files(fps, os.path.join(dir_, d))
@@ -58,6 +60,7 @@ def create_dataset(dataset_path, files, sr=11025):
     dataset = []
     for f in tqdm(files):
         wav, _ = librosa.load(f, sr=sr)
+        # wav, _ = sf.read(f, sr=sr)
 #         wav = librosa.util.normalize(wav)
         quantized_wav = quantize(wav, 8)    # 8 bit
         quantized_wav = np.clip(quantized_wav, 0, 2**8 - 1)
@@ -68,5 +71,5 @@ def create_dataset(dataset_path, files, sr=11025):
 if __name__ == '__main__':
     opt = set_option()
 
-    files = get_files(opt.data_dir)
+    files = get_files(opt.data_dir, opt.audio_type)
     create_dataset(opt.dataset_path, files)
